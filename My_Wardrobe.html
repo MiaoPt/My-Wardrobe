@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Wardrobe</title>
+    <link rel="icon" href="wardrobe.jpg" type="image/jpg">
+    <link rel="stylesheet" href="My_Wardrobe.css">
+</head>
+
+<body>
+    <p class="all-texts">Hello gorgeous! Style starts here—let us dress you well!</p>
+    <div id="status-message"></div>
+    <div id="weather-data"></div>
+    <div id="text-suggestions" class="all-texts">Here is what we suggest for today!If you are not happy with it, click 'More'</div>
+    
+    
+    <div class="model_1-container">
+        <p class="all-texts">The Wow Room!</p>
+        <img src="clothes pictures/model_1.png" alt='model' class="model_1-image">
+        <button class="js-reset-button" data-clearbutton="reset">Reset</button>
+        <button id ='change-outfit'>More</button>
+        <!-- Transparent Clothing slots -->
+        <img src="" class = "top-slot">
+        <img src="" class = "bottom-slot">
+        <img src="" class = "shoes-slot">
+        <img src="" class = "outfit-slot">
+        
+    </div>
+
+    <!-- Thumnails -->  
+    <div class="wardrobe">
+        <h1 class="all-texts">The Secret Stash!</h1>
+    
+    <div id="js-thick-top">
+    <div class="wrap-heading">
+        <h2 class='heading'>Thick Tops</h2>
+        <button class="js-clear-button" data-clearbutton="thick-top">Clear</button>
+    </div>
+        <img src="clothes pictures/jumper_1.png" alt='red jumper' class="wardrobe-item js-top" data-slot="top" data-tag='thick'>
+        <img src="clothes pictures/jumper_2.png" alt='colorful jumper'class="wardrobe-item js-top" data-slot="top" data-tag='thick'>
+    </div>
+
+    <div id="js-thin-top">
+    <div class="wrap-heading">
+        <h2 class='heading'>Thin Tops</h2>
+        <button class="js-clear-button" data-clearbutton="thin-top">Clear</button>
+    </div>
+        <img src="clothes pictures/thin_top_1.png" alt='black top' class="wardrobe-item js-top" data-slot="top" data-tag ='thin'>
+    </div>
+
+
+
+    <div id="js-thin-bottom">
+    <div class="wrap-heading">
+        <h2 class='heading'>Thick Bottoms</h2>
+        <button class="js-clear-button" data-clearbutton="thick-bottom">Clear</button>   
+    </div>
+    <img src="clothes pictures/skirt_1.png" alt='blue skirt' class="wardrobe-item js-bottom" data-slot="bottom" data-tag ='thick'>
+    <img src="clothes pictures/trouser_1.png" alt='black trouser' class="wardrobe-item js-bottom" data-slot="bottom" data-tag ='thick'>
+    </div>
+    
+
+
+    <div id="js-thin-bottom">
+    <div class="wrap-heading">
+        <h2 class='heading'>Thin Bottoms</h2>
+        <button class="js-clear-button" data-clearbutton="thin-bottom">Clear</button>
+    </div>
+        <img src="clothes pictures/bottom_3.png" alt='colorful skirt' class="wardrobe-item js-bottom" data-slot="bottom" data-tag ='thin'>
+    </div>
+    
+    <div id="js-thick-outfit">
+    <div class="wrap-heading">
+        <h2 class='heading'>Thick Outfit</h2>
+        <button class="js-clear-button" data-clearbutton="thick-outfit">Clear</button>    
+    </div>
+    <img src="clothes pictures/skirt_2.png" alt='purple dress' class="wardrobe-item js-outfit" data-slot="outfit" data-tag='thick'>
+    <img src="clothes pictures/skirt_3.png" alt='white dress' class="wardrobe-item js-outfit" data-slot="outfit" data-tag='thick'> 
+    </div>
+
+    <div id="js-thin-outfit">
+    <div class="wrap-heading">
+        <h2 class='heading'>Thin Outfit</h2>
+        <button class="js-clear-button" data-clearbutton="thin-outfit">Clear</button>
+    </div>
+        <img src="clothes pictures/white_dress.png" alt='white_dress' class="wardrobe-item js-outfit" data-slot="outfit" data-tag='thin'>
+    </div>  
+    
+
+    <div id="js-thick-shoes">
+    <div class="wrap-heading">
+        <h2 class='heading'>Thick Shoes</h2>
+        <button class="js-clear-button" data-clearbutton="winter-shoes">Clear</button>    
+    </div>
+    <img src="clothes pictures/shoes_1.png" alt='black shoes' class="wardrobe-item js-shoes" data-slot="shoes" data-tag='thick'>
+    </div>
+    
+    <div id="js-thin-shoes">
+    <div class="wrap-heading">
+        <h2 class='heading'>Thin Shoes</h2>
+        <button class="js-clear-button" data-clearbutton="summer-shoes">Clear</button>    
+    </div>
+    <img src="clothes pictures/shoes_2.png" alt='white shoes' class="wardrobe-item js-shoes" data-slot="shoes" data-tag='thin'>
+    </div>    
+
+    </div>   
+
+    
+
+    <div id="upload-section">
+        <p class="all-texts">I want to upload my beautiful</p>
+        <select id="category" style="font-family: cursive" class="h-14 w-72 rounded-2xl">
+            <option value="" selected disabled>- Choose Category -</option>
+            <option value="top">Top</option>
+            <option value="bottom">Bottom</option>
+            <option value="outfit">Outfit</option>
+            <option value="shoes">Shoes</option>
+        </select>
+        <select id="tag" style="font-family: cursive" class="h-14 w-72 rounded-2xl">
+            <option value="" selected disabled>- Choose Thickness -</option>
+            <option value="thick">Thick</option>
+            <option value="thin">Thin</option>
+        
+        </select>
+        <input type="file" id='upload' accept="image/*" hidden>
+        <label for="upload" id="upload-btn">Upload</label>
+        <button id="confirm-btn" >Yes</button>
+        <button id="cancel-btn">No</button> 
+
+        <div id="preview"></div>
+      
+
+    </div>
+
+<!-- Load the script -->
+<script src="My_Wardrobe.js"></script>   
+
+</body>
+
+</html>

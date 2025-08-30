@@ -1,0 +1,267 @@
+body {
+  background-image: url('background.jpg'); 
+  background-size: cover;  
+  background-position: center;
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(179, 178, 178, 0.4); 
+  z-index: -1; 
+}
+
+
+#weather-data {
+    color:darkgreen;
+    font-size: 30px;
+    font-family: cursive;
+
+}
+
+#status-message {
+    color:darkgreen;
+    font-size: 30px;
+    font-family: cursive;
+}
+
+
+.spinner {
+  border: 4px solid rgba(0,0,0,0.1);
+  border-top: 4px solid #333;    
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  animation: spin 1s linear infinite;
+  margin-right: 8px; 
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+.all-texts {
+    text-align: center;
+    color:black;
+    font-size: 30px;
+    font-family: cursive;
+    
+}
+
+.model_1-container {
+    position: relative;
+    border-style: solid;
+    width: 700px;
+    height: 900px;
+    border-radius: 10px;
+}
+
+.model_1-image {
+    display: block;  
+    margin: 0 auto;
+    width: 75%;
+    z-index: 1;     
+}
+
+
+.top-slot {
+    position: absolute;
+    top: 25%;
+    left:50%;
+    transform: translateX(-50%);
+    z-index: 4;
+    
+}
+
+
+.bottom-slot {
+    position: absolute;
+    top: 45%;
+    left:50%;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+.shoes-slot {
+    position: absolute;
+    top: 86%;
+    left:50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+.outfit-slot {
+    position: absolute;
+    top: 25%;
+    left:50%;
+    transform: translateX(-50%);
+    z-index: 5;
+}
+
+.wardrobe {
+  margin-top: 20px;     
+  display: grid;           
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 50px;               /* space between items */
+  width: 750px;
+  border-style: solid;
+  border-radius: 10px;
+  height: 900px;
+  /*border: 2px solid #ddd;
+  border-radius: 8px;*/  
+}
+
+.wardrobe-item {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 5px;
+    object-fit: contain;
+    border-radius: 8px; 
+}
+.wardrobe-item:hover {
+    border: 2px solid #989898;
+}
+
+.heading {
+    margin:8px;
+}
+
+.model_1-container, .wardrobe {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 10px;
+    
+}
+
+
+
+/*upload section*/
+#upload-section {
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+ justify-content: center;
+}
+
+#category, #tag {
+    display: inline-block;
+    height:50px;
+    font-size: 25px;
+    padding: 0 18px;
+    border-radius: 12px;
+    background-color: transparent;
+}
+#category option, #tag option {
+    background-color: transparent;
+}
+
+
+#category:hover, #tag:hover {
+    cursor:pointer;
+}
+
+#upload-btn {
+    display: inline-block;
+    vertical-align: top;
+    color: rgb(9, 9, 9);
+}
+
+#confirm-btn, 
+#cancel-btn,
+#change-outfit {
+    display: none;
+    border-radius: 8px;
+}
+#text-suggestions {
+    display: none;
+    margin: 10px;
+}
+
+/*upload section*/
+
+
+
+.wardrobe-item-wrapper {
+    position: relative;
+    display: inline-block;
+
+}
+
+.wardrobe-item-wrapper:hover {
+    .remove-btn {
+        opacity: 0.8;
+    }
+
+}
+
+.remove-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+
+}
+
+
+.selected {
+    border-style: solid;
+    border-color: black;
+}
+
+.js-clear-button, .js-reset-button, #upload-btn, #confirm-btn, #cancel-btn {
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    color: rgb(9, 9, 9);
+    width: 80px;
+    height: 35px;
+    font-size: 20px;
+    font-family: cursive;}
+
+.js-clear-button, .js-reset-button:hover {
+  background: #cdcecf;
+}
+
+.wrap-heading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.js-reset-button {
+    position: absolute;
+    top: 1%;
+    right: 2%;
+}
+
+#change-outfit {
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    color: rgb(9, 9, 9);
+    width: 80px;
+    height: 35px;
+    font-size: 20px;
+    font-family: cursive;}
+
+#change-outfit {
+  background: #cdcecf;
+}
+
+#change-outfit {
+    position: absolute;
+    top: 1%;
+    left: 2%;
+}
+
+
+
