@@ -185,7 +185,7 @@ statusMessage.innerHTML = `
 navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
 
 async function getWeather(lat, lon) {
-    const apiKey = '2d5bad4edcaa282b3f4f4dde28194321';
+    const apiKey = '';
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
     try {
         const response = await fetch(url)
